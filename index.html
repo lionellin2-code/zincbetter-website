@@ -1,1056 +1,358 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>福建锌必得新材料有限公司 | FuJian ZincBetter New Materials Co., Ltd.</title>
-  <meta name="description" content="福建锌必得新材料有限公司 — 专注锌系新材料研发与生产的高新技术企业，高品质碱式氯化锌制造商。年产10000吨食品添加剂，GB/T 22546-2008标准制造。" />
-  <meta name="keywords" content="碱式氯化锌, Basic Zinc Chloride, 锌添加剂, 饲料添加剂, 福建锌必得, ZincBetter, GB/T 22546-2008, Zn5(OH)8Cl2·H2O" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
-  <style>
-    /* ========== RESET & BASE ========== */
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    html { scroll-behavior: smooth; font-size: 16px; }
-    body {
-      font-family: 'Inter', 'Noto Sans SC', -apple-system, BlinkMacSystemFont, sans-serif;
-      color: #1a1a2e; line-height: 1.7; background: #fff;
-      -webkit-font-smoothing: antialiased;
-    }
-    img { max-width: 100%; height: auto; display: block; }
-    a { text-decoration: none; color: inherit; transition: color 0.3s; }
-    ul { list-style: none; }
-    .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover">
+<title>锌必得 ZincBetter</title>
+<link rel="icon" type="image/png" href="img/LOGO_iconT.png">
+<style>
+:root{--brand:#0f5132;--navy:#0e3a5f;--line:#e8e8ec;--mut:#8a8a8e;--bg:#f4f6f8}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{height:100%}
+body{font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;background:var(--bg);color:#1c1c1e;-webkit-font-smoothing:antialiased}
+.app{max-width:480px;margin:0 auto;min-height:100dvh;background:#fff;position:relative;padding-bottom:60px}
+/* header */
+.hd{background:linear-gradient(135deg,var(--navy),var(--brand));color:#fff;padding:16px 16px 14px}
+.hd .logo{font-size:12px;letter-spacing:2px;opacity:.8;font-weight:600}
+.hd .logo b{font-size:14px;letter-spacing:1px}
+.hd h1{font-size:18px;font-weight:600;margin-top:5px}
+/* sections */
+.sec{padding:16px}
+.sec h2{font-size:15px;font-weight:700;color:var(--navy);margin-bottom:10px;border-left:3px solid var(--brand);padding-left:8px}
+.sec p{font-size:13.5px;line-height:1.75;color:#3a3a3c;margin-bottom:10px}
+/* hero (home) */
+.hero{position:relative;text-align:center;padding:30px 18px 24px;background:linear-gradient(rgba(255,255,255,.62),rgba(255,255,255,.62)),url("img/Company.jpg") center/cover no-repeat}
+.hero-logo{position:absolute;top:8px;left:10px;z-index:2;width:82px;height:auto}
+.hero .brand{font-size:12px;font-weight:700;letter-spacing:3px;color:var(--brand);margin-bottom:12px}
+.hero .name{font-size:36px;font-weight:800;color:var(--navy);letter-spacing:3px}
+.hero .slogan{font-size:13px;color:#555;margin-top:14px;line-height:1.8}
+.hero .slogan b{color:var(--brand);font-weight:600}
+/* card grid */
+.cards{display:grid;grid-template-columns:1fr 1fr;gap:10px;padding:0 14px}
+.card{background:#fff;border:1px solid var(--line);border-radius:12px;padding:14px 12px;box-shadow:0 1px 4px rgba(0,0,0,.04)}
+.card .ic{font-size:22px;margin-bottom:8px}
+.card .t{font-size:13px;font-weight:700;color:var(--navy);margin-bottom:4px}
+.card .d{font-size:11px;color:var(--mut);line-height:1.5}
+.product-cards{grid-template-columns:1fr;gap:12px;padding:0}
+.product-cards .card{width:min(90vw,432px);min-height:277px;margin:0 auto}
+.product-cards .zno-card{background-image:linear-gradient(rgba(255,255,255,.52),rgba(255,255,255,.52)),url("img/ProductZnO.jpg");background-position:center;background-size:100% 100%,100% 160%}
+.product-cards .tbzc-card{background-image:linear-gradient(rgba(255,255,255,.52),rgba(255,255,255,.52)),url("img/ProductTBZC.jpeg");background-position:center;background-size:cover}
+.product-description{width:min(90vw,432px);margin:14px auto 0}
+.product-description p{font-size:13px;line-height:1.75;color:#3a3a3c}
+/* highlight box */
+.hi{background:var(--brand);color:#fff;border-radius:12px;padding:14px 16px;font-size:13px;line-height:1.75;margin:0 14px}
+/* sub tabs (applications) */
+.subtabs{display:flex;gap:8px;padding:0 14px 4px;overflow-x:auto;scrollbar-width:none}
+.subtabs::-webkit-scrollbar{display:none}
+.subtab{flex-shrink:0;background:#fff;border:1px solid var(--line);border-radius:20px;padding:8px 16px;font-size:12px;color:#666}
+.subtab.on{background:var(--brand);color:#fff;border-color:var(--brand)}
+.sec[data-app="agri"]{background:linear-gradient(rgba(255,255,255,.55),rgba(255,255,255,.55)),url("img/background1.jpg") center/cover no-repeat}
+/* table */
+.tbl{width:100%;border-collapse:collapse;margin:10px 0;font-size:12.5px}
+.tbl th,.tbl td{border:1px solid var(--line);padding:9px 10px;text-align:left}
+.tbl th{background:var(--bg);color:var(--navy);font-weight:700}
+/* kpi */
+.kpi{display:grid;grid-template-columns:1fr 1fr;gap:10px;padding:0 14px}
+.kpi .k{background:#fff;border:1px solid var(--line);border-radius:12px;padding:14px 12px;text-align:center}
+.kpi .k .v{font-size:20px;font-weight:800;color:var(--brand)}
+.kpi .k .l{font-size:11px;color:var(--mut);margin-top:4px}
+/* contact rows */
+.crow{display:flex;align-items:center;gap:10px;padding:13px 16px;border-bottom:1px solid #f0f0f2}
+.crow .ic{font-size:18px}
+.crow .v{font-size:13.5px;flex:1}
+.crow .l{font-size:11px;color:var(--mut);margin-top:2px}
+/* bottom nav */
+.nav{position:fixed;bottom:0;left:50%;transform:translateX(-50%);width:100%;max-width:480px;background:#fff;border-top:1px solid var(--line);display:flex;z-index:10;padding-bottom:env(safe-area-inset-bottom)}
+.nav a{flex:1;text-align:center;padding:9px 2px 8px;font-size:10.5px;color:#9a9a9e;text-decoration:none}
+.nav a .ico{display:block;font-size:17px;margin-bottom:2px}
+.nav a.on{color:var(--brand);font-weight:600}
+.ft{text-align:center;font-size:11px;color:#b0b0b4;padding:14px 0 6px}
+.note{font-size:11px;color:var(--mut);padding:8px 14px;line-height:1.6}
+.page{display:none}.page.active{display:block}
+.page[data-page="products"]{background-image:linear-gradient(rgba(255,255,255,.4),rgba(255,255,255,.4)),url("img/Eco-firendly.jpg");background-size:100% 100%,100% auto;background-position:center top;background-repeat:no-repeat,repeat-y}
+ol,ul{padding-left:18px}
 
-    /* ========== COLOR VARIABLES ========== */
-    :root {
-      --primary: #00A99D;
-      --primary-dark: #008B82;
-      --primary-light: #E6F5F4;
-      --accent: #2563EB;
-      --dark: #1F2329;
-      --gray-900: #111827;
-      --gray-700: #374151;
-      --gray-500: #6B7280;
-      --gray-300: #D1D5DB;
-      --gray-100: #F3F4F6;
-      --white: #FFFFFF;
-      --success: #10B981;
-      --shadow-sm: 0 1px 3px rgba(0,0,0,0.08);
-      --shadow-md: 0 4px 20px rgba(0,0,0,0.08);
-      --shadow-lg: 0 10px 40px rgba(0,0,0,0.12);
-      --radius: 12px;
-      --radius-lg: 20px;
-    }
-
-    /* ========== HEADER ========== */
-    .header {
-      position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
-      background: rgba(255,255,255,0.95);
-      backdrop-filter: blur(20px);
-      border-bottom: 1px solid rgba(0,0,0,0.06);
-      transition: all 0.3s ease;
-    }
-    .header.scrolled { box-shadow: var(--shadow-md); }
-    .header .container {
-      display: flex; align-items: center; justify-content: space-between;
-      height: 72px;
-    }
-    .logo { display: flex; align-items: center; gap: 12px; }
-    .logo img { height: 40px; width: auto; }
-    .logo-text { display: flex; flex-direction: column; }
-    .logo-text .cn { font-size: 16px; font-weight: 700; color: var(--dark); line-height: 1.2; }
-    .logo-text .en { font-size: 10px; color: var(--gray-500); letter-spacing: 0.5px; text-transform: uppercase; }
-    .nav { display: flex; align-items: center; gap: 32px; }
-    .nav a {
-      font-size: 14px; font-weight: 500; color: var(--gray-700);
-      position: relative; padding: 4px 0;
-    }
-    .nav a::after {
-      content: ''; position: absolute; bottom: -2px; left: 0;
-      width: 0; height: 2px; background: var(--primary);
-      transition: width 0.3s ease;
-    }
-    .nav a:hover { color: var(--primary); }
-    .nav a:hover::after { width: 100%; }
-    .nav-cta {
-      background: var(--primary) !important; color: var(--white) !important;
-      padding: 8px 20px !important; border-radius: 8px !important;
-      font-weight: 600 !important;
-    }
-    .nav-cta::after { display: none !important; }
-    .nav-cta:hover { background: var(--primary-dark) !important; }
-    .lang-switch {
-      display: inline-flex; align-items: center; gap: 4px;
-      font-size: 13px; font-weight: 600; color: var(--gray-500);
-      padding: 6px 14px; border: 1.5px solid var(--gray-300);
-      border-radius: 8px; transition: all 0.3s; cursor: pointer;
-      background: transparent; text-decoration: none;
-    }
-    .lang-switch:hover { border-color: var(--primary); color: var(--primary); }
-    .mobile-toggle {
-      display: none; flex-direction: column; gap: 5px; cursor: pointer;
-      padding: 8px; background: none; border: none;
-    }
-    .mobile-toggle span {
-      width: 24px; height: 2px; background: var(--dark);
-      transition: all 0.3s; border-radius: 2px;
-    }
-
-    /* ========== HERO ========== */
-    .hero {
-      min-height: 100vh; display: flex; align-items: center;
-      background: linear-gradient(135deg, #f0faf9 0%, #e8f4f8 50%, #f5f7ff 100%);
-      position: relative; overflow: hidden; padding-top: 72px;
-    }
-    .hero::before {
-      content: ''; position: absolute; top: -200px; right: -200px;
-      width: 600px; height: 600px; border-radius: 50%;
-      background: radial-gradient(circle, rgba(0,169,157,0.08) 0%, transparent 70%);
-    }
-    .hero::after {
-      content: ''; position: absolute; bottom: -100px; left: -100px;
-      width: 400px; height: 400px; border-radius: 50%;
-      background: radial-gradient(circle, rgba(37,99,235,0.06) 0%, transparent 70%);
-    }
-    .hero .container {
-      display: grid; grid-template-columns: 1fr 1fr; gap: 60px;
-      align-items: center; position: relative; z-index: 1;
-    }
-    .hero-content { animation: fadeInUp 0.8s ease; }
-    .hero-badge {
-      display: inline-flex; align-items: center; gap: 8px;
-      background: var(--white); border: 1px solid var(--primary);
-      color: var(--primary); padding: 6px 16px; border-radius: 50px;
-      font-size: 13px; font-weight: 600; margin-bottom: 24px;
-    }
-    .hero-badge::before {
-      content: ''; width: 8px; height: 8px; border-radius: 50%;
-      background: var(--primary); animation: pulse 2s infinite;
-    }
-    @keyframes pulse { 0%,100% { opacity: 1; } 50% { opacity: 0.4; } }
-    .hero h1 {
-      font-size: 52px; font-weight: 900; line-height: 1.15;
-      color: var(--dark); margin-bottom: 12px;
-    }
-    .hero h1 span { color: var(--primary); }
-    .hero-subtitle {
-      font-size: 20px; color: var(--gray-500); margin-bottom: 32px;
-      font-weight: 400; line-height: 1.6;
-    }
-    .hero-formula {
-      display: inline-block; background: var(--white);
-      border: 2px solid var(--primary); border-radius: var(--radius);
-      padding: 12px 24px; margin-bottom: 32px;
-      font-family: 'Courier New', monospace;
-    }
-    .hero-formula .label { font-size: 12px; color: var(--gray-500); text-transform: uppercase; letter-spacing: 1px; }
-    .hero-formula .value { font-size: 22px; font-weight: 700; color: var(--primary-dark); }
-    .hero-buttons { display: flex; gap: 16px; flex-wrap: wrap; }
-    .btn {
-      display: inline-flex; align-items: center; gap: 8px;
-      padding: 14px 32px; border-radius: 10px; font-size: 15px;
-      font-weight: 600; transition: all 0.3s ease; cursor: pointer; border: none;
-    }
-    .btn-primary {
-      background: var(--primary); color: var(--white);
-      box-shadow: 0 4px 15px rgba(0,169,157,0.3);
-    }
-    .btn-primary:hover {
-      background: var(--primary-dark); transform: translateY(-2px);
-      box-shadow: 0 8px 25px rgba(0,169,157,0.4);
-    }
-    .btn-outline {
-      background: var(--white); color: var(--dark);
-      border: 2px solid var(--gray-300);
-    }
-    .btn-outline:hover { border-color: var(--primary); color: var(--primary); }
-    .hero-visual {
-      display: flex; justify-content: center; align-items: center;
-      animation: fadeInRight 0.8s ease;
-    }
-    .hero-card {
-      background: var(--white); border-radius: var(--radius-lg);
-      box-shadow: var(--shadow-lg); padding: 40px; width: 100%;
-      max-width: 420px; position: relative;
-    }
-    .hero-card::before {
-      content: ''; position: absolute; top: 0; left: 0; right: 0;
-      height: 4px; border-radius: var(--radius-lg) var(--radius-lg) 0 0;
-      background: linear-gradient(90deg, var(--primary), var(--accent));
-    }
-    .hero-card-header { text-align: center; margin-bottom: 24px; }
-    .hero-card-logo { width: 80px; height: 80px; margin: 0 auto 16px; }
-    .hero-card-logo img { width: 100%; height: 100%; object-fit: contain; }
-    .hero-card h3 { font-size: 18px; font-weight: 700; color: var(--dark); }
-    .hero-card p { font-size: 13px; color: var(--gray-500); margin-top: 4px; }
-    .hero-stats {
-      display: grid; grid-template-columns: 1fr 1fr; gap: 16px;
-    }
-    .hero-stat {
-      background: var(--gray-100); border-radius: var(--radius);
-      padding: 16px; text-align: center;
-    }
-    .hero-stat .num {
-      font-size: 24px; font-weight: 800; color: var(--primary);
-      display: block; line-height: 1.2;
-    }
-    .hero-stat .label { font-size: 12px; color: var(--gray-500); margin-top: 4px; }
-    .hero-cert {
-      margin-top: 20px; padding-top: 20px; border-top: 1px solid var(--gray-100);
-      text-align: center;
-    }
-    .hero-cert span {
-      display: inline-block; background: var(--primary-light);
-      color: var(--primary-dark); padding: 4px 12px; border-radius: 6px;
-      font-size: 12px; font-weight: 600;
-    }
-
-    @keyframes fadeInUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
-    @keyframes fadeInRight { from { opacity: 0; transform: translateX(30px); } to { opacity: 1; transform: translateX(0); } }
-
-    /* ========== SECTION COMMON ========== */
-    .section { padding: 100px 0; }
-    .section-header { text-align: center; margin-bottom: 60px; }
-    .section-label {
-      display: inline-block; font-size: 12px; font-weight: 700;
-      text-transform: uppercase; letter-spacing: 2px; color: var(--primary);
-      margin-bottom: 12px;
-    }
-    .section-title {
-      font-size: 40px; font-weight: 800; color: var(--dark);
-      line-height: 1.2; margin-bottom: 16px;
-    }
-    .section-desc {
-      font-size: 17px; color: var(--gray-500); max-width: 600px;
-      margin: 0 auto; line-height: 1.8;
-    }
-
-    /* ========== ABOUT ========== */
-    .about { background: var(--white); }
-    .about-grid {
-      display: grid; grid-template-columns: 1fr 1fr; gap: 60px;
-      align-items: center;
-    }
-    .about-image {
-      position: relative; border-radius: var(--radius-lg); overflow: hidden;
-      box-shadow: var(--shadow-lg);
-    }
-    .about-image img { width: 100%; height: 400px; object-fit: cover; }
-    .about-image-badge {
-      position: absolute; bottom: 20px; left: 20px;
-      background: var(--primary); color: var(--white);
-      padding: 12px 20px; border-radius: var(--radius);
-      font-weight: 700; font-size: 14px;
-    }
-    .about-content h2 {
-      font-size: 36px; font-weight: 800; color: var(--dark);
-      margin-bottom: 20px; line-height: 1.3;
-    }
-    .about-content h2 span { color: var(--primary); }
-    .about-content p {
-      font-size: 16px; color: var(--gray-700); margin-bottom: 24px;
-      line-height: 1.8;
-    }
-    .about-features {
-      display: grid; grid-template-columns: 1fr 1fr; gap: 16px;
-      margin-top: 32px;
-    }
-    .about-feature {
-      display: flex; align-items: flex-start; gap: 12px;
-      padding: 16px; background: var(--gray-100); border-radius: var(--radius);
-    }
-    .about-feature-icon {
-      width: 36px; height: 36px; border-radius: 8px;
-      background: var(--primary); color: var(--white);
-      display: flex; align-items: center; justify-content: center;
-      font-size: 16px; flex-shrink: 0;
-    }
-    .about-feature-text { font-size: 13px; font-weight: 600; color: var(--dark); line-height: 1.5; }
-
-    /* ========== PRODUCTS ========== */
-    .products { background: var(--gray-100); }
-    .product-showcase {
-      background: var(--white); border-radius: var(--radius-lg);
-      box-shadow: var(--shadow-md); overflow: hidden;
-    }
-    .product-showcase-inner {
-      display: grid; grid-template-columns: 1fr 1.2fr; gap: 0;
-    }
-    .product-image-section {
-      background: linear-gradient(135deg, var(--primary-light) 0%, #e0f2fe 100%);
-      padding: 60px; display: flex; flex-direction: column;
-      align-items: center; justify-content: center; text-align: center;
-    }
-    .product-image-section .molecule {
-      font-size: 72px; margin-bottom: 16px;
-    }
-    .product-image-section .formula-display {
-      font-family: 'Courier New', monospace; font-size: 20px;
-      font-weight: 700; color: var(--primary-dark);
-      background: var(--white); padding: 12px 24px; border-radius: var(--radius);
-      box-shadow: var(--shadow-sm);
-    }
-    .product-image-section .cas { font-size: 13px; color: var(--gray-500); margin-top: 12px; }
-    .product-info-section { padding: 60px; }
-    .product-info-section h3 {
-      font-size: 28px; font-weight: 800; color: var(--dark);
-      margin-bottom: 8px;
-    }
-    .product-info-section .subtitle {
-      font-size: 15px; color: var(--gray-500); margin-bottom: 24px;
-    }
-    .product-info-section .desc {
-      font-size: 15px; color: var(--gray-700); line-height: 1.8;
-      margin-bottom: 32px;
-    }
-    .spec-table { width: 100%; border-collapse: collapse; }
-    .spec-table th, .spec-table td {
-      padding: 12px 16px; text-align: left;
-      border-bottom: 1px solid var(--gray-100); font-size: 14px;
-    }
-    .spec-table th {
-      background: var(--primary-light); color: var(--primary-dark);
-      font-weight: 700; width: 40%;
-    }
-    .spec-table td { color: var(--gray-700); }
-    .spec-table tr:hover td { background: var(--gray-100); }
-    .spec-table .pass { color: var(--success); font-weight: 700; }
-
-    /* ========== TECHNOLOGY ========== */
-    .technology { background: var(--white); }
-    .tech-grid {
-      display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;
-      margin-bottom: 48px;
-    }
-    .tech-card {
-      background: var(--white); border: 1px solid var(--gray-100);
-      border-radius: var(--radius-lg); padding: 36px 28px;
-      transition: all 0.3s ease; position: relative; overflow: hidden;
-    }
-    .tech-card::before {
-      content: ''; position: absolute; top: 0; left: 0; right: 0;
-      height: 3px; background: var(--primary); transform: scaleX(0);
-      transition: transform 0.3s ease;
-    }
-    .tech-card:hover { box-shadow: var(--shadow-lg); transform: translateY(-4px); }
-    .tech-card:hover::before { transform: scaleX(1); }
-    .tech-card-num {
-      font-size: 48px; font-weight: 900; color: var(--primary-light);
-      line-height: 1; margin-bottom: 16px;
-    }
-    .tech-card h4 {
-      font-size: 17px; font-weight: 700; color: var(--dark);
-      margin-bottom: 12px;
-    }
-    .tech-card p { font-size: 14px; color: var(--gray-500); line-height: 1.7; }
-    .env-banner {
-      background: linear-gradient(135deg, var(--primary) 0%, #0d9488 100%);
-      border-radius: var(--radius-lg); padding: 48px; color: var(--white);
-      display: grid; grid-template-columns: 1fr 1fr; gap: 40px;
-      align-items: center;
-    }
-    .env-banner h3 { font-size: 28px; font-weight: 800; margin-bottom: 12px; }
-    .env-banner p { font-size: 15px; opacity: 0.9; line-height: 1.8; }
-    .env-features { display: flex; flex-direction: column; gap: 16px; }
-    .env-feature {
-      display: flex; align-items: center; gap: 12px;
-      background: rgba(255,255,255,0.15); border-radius: var(--radius);
-      padding: 16px 20px; backdrop-filter: blur(10px);
-    }
-    .env-feature-icon {
-      width: 40px; height: 40px; border-radius: 10px;
-      background: rgba(255,255,255,0.2); display: flex;
-      align-items: center; justify-content: center; font-size: 20px;
-      flex-shrink: 0;
-    }
-    .env-feature-text { font-size: 14px; font-weight: 600; }
-
-    /* ========== QUALITY ========== */
-    .quality { background: var(--gray-100); }
-    .quality-grid {
-      display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px;
-    }
-    .quality-card {
-      background: var(--white); border-radius: var(--radius);
-      padding: 32px 24px; text-align: center;
-      box-shadow: var(--shadow-sm); transition: all 0.3s;
-    }
-    .quality-card:hover { box-shadow: var(--shadow-md); transform: translateY(-4px); }
-    .quality-card-icon {
-      width: 64px; height: 64px; border-radius: 16px;
-      background: var(--primary-light); margin: 0 auto 16px;
-      display: flex; align-items: center; justify-content: center;
-      font-size: 28px;
-    }
-    .quality-card h4 { font-size: 15px; font-weight: 700; color: var(--dark); margin-bottom: 8px; }
-    .quality-card p { font-size: 13px; color: var(--gray-500); line-height: 1.6; }
-
-    /* ========== APPLICATIONS ========== */
-    .applications { background: var(--white); }
-    .app-grid {
-      display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;
-    }
-    .app-card {
-      border-radius: var(--radius-lg); overflow: hidden;
-      box-shadow: var(--shadow-md); transition: all 0.3s;
-    }
-    .app-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-lg); }
-    .app-card-header {
-      padding: 32px 28px; color: var(--white);
-      position: relative;
-    }
-    .app-card:nth-child(1) .app-card-header { background: linear-gradient(135deg, #00A99D, #0d9488); }
-    .app-card:nth-child(2) .app-card-header { background: linear-gradient(135deg, #2563EB, #1d4ed8); }
-    .app-card:nth-child(3) .app-card-header { background: linear-gradient(135deg, #7C3AED, #6D28D9); }
-    .app-card-header .icon { font-size: 36px; margin-bottom: 12px; }
-    .app-card-header h3 { font-size: 20px; font-weight: 700; }
-    .app-card-body { padding: 24px 28px; background: var(--white); }
-    .app-card-body p { font-size: 14px; color: var(--gray-600); line-height: 1.8; }
-    .app-card-body ul { margin-top: 12px; }
-    .app-card-body li {
-      font-size: 13px; color: var(--gray-600); padding: 4px 0;
-      padding-left: 16px; position: relative;
-    }
-    .app-card-body li::before {
-      content: '✓'; position: absolute; left: 0; color: var(--primary);
-      font-weight: 700;
-    }
-
-    /* ========== VALUES ========== */
-    .values { background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%); color: var(--white); }
-    .values .section-label { color: var(--primary); }
-    .values .section-title { color: var(--white); }
-    .values .section-desc { color: rgba(255,255,255,0.6); }
-    .values-grid {
-      display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px;
-    }
-    .value-card {
-      background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1);
-      border-radius: var(--radius-lg); padding: 32px 24px; text-align: center;
-      transition: all 0.3s;
-    }
-    .value-card:hover {
-      background: rgba(255,255,255,0.1); transform: translateY(-4px);
-    }
-    .value-card-icon {
-      width: 56px; height: 56px; border-radius: 14px;
-      background: var(--primary); margin: 0 auto 16px;
-      display: flex; align-items: center; justify-content: center;
-      font-size: 24px;
-    }
-    .value-card h4 { font-size: 15px; font-weight: 700; margin-bottom: 8px; }
-    .value-card p { font-size: 13px; color: rgba(255,255,255,0.6); line-height: 1.7; }
-
-    /* ========== CONTACT ========== */
-    .contact { background: var(--white); }
-    .contact-grid {
-      display: grid; grid-template-columns: 1fr 1fr; gap: 48px;
-    }
-    .contact-info h3 { font-size: 28px; font-weight: 800; color: var(--dark); margin-bottom: 8px; }
-    .contact-info > p { font-size: 15px; color: var(--gray-500); margin-bottom: 32px; }
-    .contact-items { display: flex; flex-direction: column; gap: 20px; }
-    .contact-item {
-      display: flex; align-items: flex-start; gap: 16px;
-    }
-    .contact-item-icon {
-      width: 48px; height: 48px; border-radius: 12px;
-      background: var(--primary-light); display: flex;
-      align-items: center; justify-content: center;
-      font-size: 20px; flex-shrink: 0;
-    }
-    .contact-item-text h4 { font-size: 14px; font-weight: 700; color: var(--dark); margin-bottom: 4px; }
-    .contact-item-text p { font-size: 14px; color: var(--gray-500); }
-    .contact-item-text a { color: var(--primary); }
-    .contact-map {
-      background: var(--gray-100); border-radius: var(--radius-lg);
-      overflow: hidden; min-height: 400px; position: relative;
-    }
-    .contact-map-placeholder {
-      width: 100%; height: 100%; min-height: 400px;
-      background: linear-gradient(135deg, var(--primary-light) 0%, #e0f2fe 100%);
-      display: flex; flex-direction: column;
-      align-items: center; justify-content: center; text-align: center;
-      padding: 40px;
-    }
-    .contact-map-placeholder .pin { font-size: 48px; margin-bottom: 16px; }
-    .contact-map-placeholder h4 { font-size: 18px; font-weight: 700; color: var(--dark); margin-bottom: 8px; }
-    .contact-map-placeholder p { font-size: 14px; color: var(--gray-500); line-height: 1.6; }
-
-    /* ========== FOOTER ========== */
-    .footer {
-      background: var(--gray-900); color: rgba(255,255,255,0.7);
-      padding: 60px 0 0;
-    }
-    .footer-grid {
-      display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 40px;
-      padding-bottom: 40px; border-bottom: 1px solid rgba(255,255,255,0.1);
-    }
-    .footer-brand .logo-text .cn { color: var(--white); }
-    .footer-brand .logo-text .en { color: rgba(255,255,255,0.5); }
-    .footer-brand p { font-size: 14px; color: rgba(255,255,255,0.5); margin-top: 16px; line-height: 1.7; }
-    .footer-col h4 {
-      font-size: 14px; font-weight: 700; color: var(--white);
-      margin-bottom: 20px; text-transform: uppercase; letter-spacing: 1px;
-    }
-    .footer-col ul li { margin-bottom: 10px; }
-    .footer-col ul li a {
-      font-size: 14px; color: rgba(255,255,255,0.5); transition: color 0.3s;
-    }
-    .footer-col ul li a:hover { color: var(--primary); }
-    .footer-bottom {
-      padding: 24px 0; display: flex; justify-content: space-between;
-      align-items: center; font-size: 13px; color: rgba(255,255,255,0.4);
-    }
-    .footer-bottom a { color: var(--primary); }
-
-    /* ========== MOBILE NAV ========== */
-    .mobile-nav {
-      display: none; position: fixed; top: 72px; left: 0; right: 0;
-      background: var(--white); box-shadow: var(--shadow-lg);
-      padding: 20px 24px; z-index: 999;
-      flex-direction: column; gap: 16px;
-    }
-    .mobile-nav.active { display: flex; }
-    .mobile-nav a {
-      font-size: 15px; font-weight: 500; color: var(--gray-700);
-      padding: 8px 0; border-bottom: 1px solid var(--gray-100);
-    }
-    .mobile-nav a:last-child { border: none; }
-
-    /* ========== RESPONSIVE ========== */
-    @media (max-width: 1024px) {
-      .hero .container { grid-template-columns: 1fr; text-align: center; }
-      .hero h1 { font-size: 40px; }
-      .hero-buttons { justify-content: center; }
-      .hero-visual { margin-top: 40px; }
-      .about-grid { grid-template-columns: 1fr; }
-      .product-showcase-inner { grid-template-columns: 1fr; }
-      .tech-grid { grid-template-columns: repeat(2, 1fr); }
-      .env-banner { grid-template-columns: 1fr; }
-      .quality-grid { grid-template-columns: repeat(2, 1fr); }
-      .values-grid { grid-template-columns: repeat(2, 1fr); }
-      .contact-grid { grid-template-columns: 1fr; }
-      .footer-grid { grid-template-columns: 1fr 1fr; }
-    }
-    @media (max-width: 768px) {
-      .nav { display: none; }
-      .mobile-toggle { display: flex; }
-      .hero h1 { font-size: 32px; }
-      .hero-subtitle { font-size: 16px; }
-      .section { padding: 60px 0; }
-      .section-title { font-size: 28px; }
-      .tech-grid, .app-grid { grid-template-columns: 1fr; }
-      .quality-grid { grid-template-columns: 1fr 1fr; }
-      .values-grid { grid-template-columns: 1fr; }
-      .footer-grid { grid-template-columns: 1fr; }
-      .footer-bottom { flex-direction: column; gap: 8px; text-align: center; }
-    }
-    @media (max-width: 480px) {
-      .hero-stats { grid-template-columns: 1fr; }
-      .about-features { grid-template-columns: 1fr; }
-      .quality-grid { grid-template-columns: 1fr; }
-    }
-
-    /* ========== SCROLL ANIMATIONS ========== */
-    .reveal {
-      opacity: 0; transform: translateY(30px);
-      transition: all 0.6s ease;
-    }
-    .reveal.visible { opacity: 1; transform: translateY(0); }
-  </style>
+/* ===== 图片轮播 carousel ===== */
+.carousel{position:relative;margin:14px -16px 0;overflow:hidden;background:#000}
+.carousel-track{display:grid}
+.carousel-item{grid-area:1/1;position:relative;opacity:0;transition:opacity .6s ease}
+.carousel-item.active{opacity:1}
+.carousel-item img{width:100%;display:block;aspect-ratio:16/9;object-fit:cover}
+.carousel-item .cap{position:absolute;left:0;right:0;bottom:0;padding:8px 12px;background:linear-gradient(transparent,rgba(0,0,0,.55));color:#fff;font-size:12px}
+/* 左右箭头 */
+.carousel-btn{position:absolute;top:50%;transform:translateY(-50%);width:34px;height:34px;border-radius:50%;background:rgba(255,255,255,.85);border:none;font-size:18px;line-height:1;cursor:pointer;display:none;align-items:center;justify-content:center;color:#333;z-index:2}
+.carousel-btn.prev{left:8px}
+.carousel-btn.next{right:8px}
+.carousel:hover .carousel-btn{display:flex}
+/* 指示点 */
+.carousel-dots{position:absolute;bottom:10px;left:0;right:0;display:flex;justify-content:center;gap:6px;z-index:2}
+.carousel-dots span{width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,.5);cursor:pointer}
+.carousel-dots span.on{background:#fff}
+</style>
 </head>
 <body>
+<div class="app">
 
-  <!-- ========== HEADER ========== -->
-  <header class="header" id="header">
-    <div class="container">
-      <a href="#hero" class="logo">
-        <img src="LOGO_icon.png" alt="ZincBetter Logo" />
-        <div class="logo-text">
-          <span class="cn">福建锌必得新材料</span>
-          <span class="en">FuJian ZincBetter</span>
-        </div>
-      </a>
-      <nav class="nav">
-        <a href="#about">关于我们</a>
-        <a href="#products">产品中心</a>
-        <a href="#technology">核心工艺</a>
-        <a href="#applications">应用领域</a>
-        <a href="#quality">质量保障</a>
-        <a href="#contact" class="nav-cta">联系我们</a>
-        <a href="en.html" class="lang-switch" title="Switch to English">🌐 EN</a>
-      </nav>
-      <button class="mobile-toggle" id="mobileToggle" aria-label="Menu">
-        <span></span><span></span><span></span>
-      </button>
+  <!-- 首页 -->
+  <section class="page active" data-page="home">
+    <div class="hero">
+      <img class="hero-logo" src="img/LOGO_fullT.png" alt="ZincBetter 锌必得">
+      <div class="brand">ZINC · BETTER</div>
+      <div class="name">锌必得</div>
+      <div class="slogan"><b>从锌出发，成就力量</b><br>以科学为本，赢得信任</div>
     </div>
-  </header>
 
-  <!-- Mobile Nav -->
-  <div class="mobile-nav" id="mobileNav">
-    <a href="#about" onclick="closeMobile()">关于我们</a>
-    <a href="#products" onclick="closeMobile()">产品中心</a>
-    <a href="#technology" onclick="closeMobile()">核心工艺</a>
-    <a href="#applications" onclick="closeMobile()">应用领域</a>
-    <a href="#quality" onclick="closeMobile()">质量保障</a>
-    <a href="#contact" onclick="closeMobile()">联系我们</a>
-    <a href="en.html" onclick="closeMobile()" style="color:var(--primary);font-weight:600;">🌐 Switch to English</a>
-  </div>
-
-  <!-- ========== HERO ========== -->
-  <section class="hero" id="hero">
-    <div class="container">
-      <div class="hero-content">
-        <div class="hero-badge">GB/T 22546-2008 标准制造</div>
-        <h1>高品质<br /><span>碱式氯化锌</span><br />制造商</h1>
-        <p class="hero-subtitle">
-          福建锌必得新材料有限公司 — 专注锌系新材料研发与生产的高新技术企业<br />
-          年产10,000吨食品添加剂，以科技赋能产业，以品质铸就信赖
-        </p>
-        <div class="hero-formula">
-          <div class="label">分子式 Molecular Formula</div>
-          <div class="value">Zn₅(OH)₈Cl₂·H₂O</div>
+    <!-- 图片轮播区 -->
+    <div class="sec" style="padding-top:0">
+      <h2>应用示例</h2>
+      <div class="carousel" id="carousel">
+        <div class="carousel-track" id="track">
+          <div class="carousel-item"><img src="img/pig.jpeg" alt="生猪养殖"><div class="cap">生猪养殖 · 饲料应用</div></div>
+          <div class="carousel-item"><img src="img/paint.jpg" alt="涂料色彩"><div class="cap">涂料色彩 · 颜料应用</div></div>
+          <div class="carousel-item"><img src="img/tire.jpg" alt="轮胎制造"><div class="cap">轮胎制造 · 橡胶应用</div></div>
+          <div class="carousel-item"><img src="img/Gear.jpg" alt="齿轮制造"><div class="cap">齿轮制造 · 工业应用</div></div>
+          <div class="carousel-item"><img src="img/Glass.jpg" alt="玻璃陶瓷"><div class="cap">玻璃陶瓷 · 工业应用</div></div>
         </div>
-        <div class="hero-buttons">
-          <a href="#products" class="btn btn-primary">🔬 了解产品</a>
-          <a href="#contact" class="btn btn-outline">📞 联系我们</a>
-        </div>
-      </div>
-      <div class="hero-visual">
-        <div class="hero-card">
-          <div class="hero-card-header">
-            <div class="hero-card-logo">
-              <img src="LOGO_full.png" alt="ZincBetter" />
-            </div>
-            <h3>FuJian ZincBetter</h3>
-            <p>High-Quality Basic Zinc Chloride</p>
-          </div>
-          <div class="hero-stats">
-            <div class="hero-stat">
-              <span class="num">9,000万</span>
-              <span class="label">总投资 (RMB)</span>
-            </div>
-            <div class="hero-stat">
-              <span class="num">10,000吨</span>
-              <span class="label">年产能</span>
-            </div>
-            <div class="hero-stat">
-              <span class="num">≥58%</span>
-              <span class="label">锌含量</span>
-            </div>
-            <div class="hero-stat">
-              <span class="num">100%</span>
-              <span class="label">检测覆盖</span>
-            </div>
-          </div>
-          <div class="hero-cert">
-            <span>🏆 全套官方批文 · 环评审批通过</span>
-          </div>
-        </div>
+        <button class="carousel-btn prev" onclick="carouselPrev()" aria-label="上一张">‹</button>
+        <button class="carousel-btn next" onclick="carouselNext()" aria-label="下一张">›</button>
+        <div class="carousel-dots" id="dots"></div>
       </div>
     </div>
+
+    <div class="sec"><h2>锌必得</h2>
+      <p>专注于氧化锌（ZnO）与碱式氯化锌（TBZC）的研发、生产与应用，为农业饲料、玻璃陶瓷、橡胶化工等行业提供稳定的锌基材料解决方案。</p>
+    </div>
+    <div class="sec" style="padding-top:0"><h2>核心产品</h2></div>
+    <div class="cards">
+      <div class="card"><div class="ic">🧪</div><div class="t">活性氧化锌 ZnO</div><div class="d"><br>高活性·高纯度</div></div>
+      <div class="card"><div class="ic">🏭</div><div class="t">碱式氯化锌 TBZC</div><div class="d">玻璃陶瓷 / 特种化工<br>高稳定性</div></div>
+    </div>
+    <div style="height:14px"></div>
+    <div class="hi">我们可以为客户提供订制化材料选型到应用适配的全流程支持，可根据具体作物类型、饲料配方结构及使用条件进行订制化评估。</div>
+      </section>
+
+  <!-- 产品介绍 -->
+  <section class="page" data-page="products">
+    <div class="hd"><div class="logo">ZINC·BETTER <b>锌必得</b></div><h1>产品介绍</h1></div>
+    <div class="sec"><h2>锌必得产品系列</h2>
+      <p>公司主营活性氧化锌（ZnO）与碱式氯化锌（TBZC）两大系列，按应用方向分为饲料/医药级/颜料/橡胶鞋材工业级及特种化工/玻璃陶瓷级等。</p>
+    </div>
+    <div class="sec" style="padding-top:0"><h2>产品明细</h2></div>
+    <div class="cards product-cards">
+      <div class="card zno-card"><div class="ic">🧪</div><div class="t">活性氧化锌 ZnO</div><div class="d">氧化锌是一种应用广泛的锌化<br>合物。基于参数特性与应用需<br>求的差异，锌必得提供多种氧<br>化锌产品，以最大效益精确匹<br>配不同的应用场景。</div></div>
+      <div class="card tbzc-card"><div class="ic">🏭</div><div class="t">碱式氯化锌 TBZC</div><div class="d">饲料与动物营养<br>在动物营养体系中，碱式氯化锌<br>作为锌源使用，更关注长期使用<br>过程中的稳定性、安全性及配方<br>适配性。其应用需结合饲料体系<br>结构与相关使用要求综合评估。</div></div>
+    </div>
+    <div class="product-description"><p>锌化合物。基于参数特性与应用需求的差异，锌必得提供多种锌化合物产品，以最大效益精确匹配不同的应用场景。</p></div>
+    <div class="sec"><div class="note">注：具体技术指标（纯度、粒径、BET 比表面积、活性度等）以公司最新产品规格书为准。</div></div>
+    <div class="ft">© 福建锌必得新材料有限公司</div>
   </section>
 
-  <!-- ========== ABOUT ========== -->
-  <section class="section about" id="about">
-    <div class="container">
-      <div class="about-grid">
-        <div class="about-image reveal">
-          <div style="background:linear-gradient(135deg,#00A99D,#0d9488);width:100%;height:400px;border-radius:20px;display:flex;align-items:center;justify-content:center;">
-            <div style="text-align:center;color:#fff;">
-              <div style="font-size:80px;margin-bottom:16px;">🏭</div>
-              <div style="font-size:24px;font-weight:800;">现代化智能工厂</div>
-              <div style="font-size:14px;opacity:0.8;margin-top:8px;">全自动化生产线 · 精密质控体系</div>
-            </div>
-          </div>
-          <div class="about-image-badge">高新技术企业</div>
-        </div>
-        <div class="about-content reveal">
-          <div class="section-label">关于我们 About Us</div>
-          <h2>以科技赋能产业<br /><span>以品质铸就信赖</span></h2>
-          <p>
-            福建锌必得新材料有限公司是一家专注锌系新材料研发与生产的高新技术企业，深耕行业前沿技术，聚焦高品质锌源的创新与产业化应用。公司总投资9000万元，建成年产10000吨食品添加剂加工基地。
-          </p>
-          <p>
-            已获发改备案、环评审批及施工许可等全套官方批文，生产全流程严格遵循国家法规与行业标准。依托先进生产工艺与持续研发投入，打造高纯度、高稳定性的锌源添加剂，赋能食品与饲料行业发展。
-          </p>
-          <div class="about-features">
-            <div class="about-feature">
-              <div class="about-feature-icon">🔬</div>
-              <div class="about-feature-text">专注锌系新材料研发与生产</div>
-            </div>
-            <div class="about-feature">
-              <div class="about-feature-icon">🏭</div>
-              <div class="about-feature-text">全自动化智能生产线</div>
-            </div>
-            <div class="about-feature">
-              <div class="about-feature-icon">📋</div>
-              <div class="about-feature-text">全套官方批文合规保障</div>
-            </div>
-            <div class="about-feature">
-              <div class="about-feature-icon">🌿</div>
-              <div class="about-feature-text">MVR+RO零污水排放</div>
-            </div>
-          </div>
-        </div>
-      </div>
+  <!-- 应用领域 -->
+  <section class="page" data-page="apps">
+    <div class="hd"><div class="logo">ZINC·BETTER <b>锌必得</b></div><h1>应用领域</h1></div>
+    <div class="subtabs" id="subtabs">
+      <div class="subtab on" data-app="agri">农业与饲料</div>
+      <div class="subtab" data-app="chem">精细化工与特种材料</div>
+      <div class="subtab" data-app="coat">涂料与油漆</div>
+      <div class="subtab" data-app="glass">玻璃与陶瓷</div>
+      <div class="subtab" data-app="adv">先进材料与高科技应用</div>
     </div>
+    <div class="sec" data-app="agri">
+      <h2>农业与饲料</h2>
+      <p>在农业与饲料体系中，锌作为重要的微量元素，被广泛应用于作物营养补充与动物饲料配方中。其应用贯穿植物生长、动物营养及相关生产体系，对材料的稳定性与适配性有严格要求。</p>
+      <h2>锌在体系中的作用</h2>
+      <p>锌在这个体系中并非单一投入物，而是参与多种生理与代谢过程。其实际作用受方式、配方结构及使用条件的影响，通常需要进行综合考虑。</p>
+      <h2>材料选型关注点</h2>
+      <p>对锌基添加剂的选择，关注点通常在长期使用稳定性、批次一致性及体系适配性上。材料通常需要在满足基本参数的同时，兼顾安全性，并适配使用条件的差异。</p>
+      <table class="tbl">
+        <tr><th>常见材料类型</th><th>锌必得相关产品系列</th></tr>
+        <tr><td>氧化锌（ZnO）</td><td>ZB-P / ZB-A</td></tr>
+        <tr><td>碱式氯化锌（TBZC）</td><td>TBZC</td></tr>
+      </table>
+      <p class="note">实际材料选型需结合具体作物类型、饲料配方结构及使用条件进行评估。</p>
+    </div>
+    <div class="sec" data-app="chem" style="display:none">
+      <h2>精细化工与特种材料</h2>
+      <p>在精细化工与特种材料领域，锌基材料通常被用于对反应过程、结构形成或材料表现具有明确控制需求的体系中。这类应用往往对材料的一致性、反应可预测性以及体系适配性有更高要求。</p>
+      <h2>锌在体系中的作用</h2>
+      <p>在该领域中，锌不再仅仅作为基础锌源存在，而是参与反应路径调控、结构稳定或功能形成等关键过程。其作用往往直接影响反应结果、材料结构或体系窗口。</p>
+      <h2>材料选型关注点</h2>
+      <p>精细化工与特种材料体系通常对反应条件高度敏感，因此材料选择更关注锌参与过程的可控性、体系响应的一致性以及在复杂工艺条件下的稳定表现。单一参数往往不足以决定材料的匹配度。</p>
+      <table class="tbl">
+        <tr><th>常见材料类型</th><th>锌必得相关产品系列</th></tr>
+        <tr><td>氧化锌（ZnO）</td><td>ZB-S</td></tr>
+        <tr><td>碱式氯化锌（TBZC）</td><td>TBZC</td></tr>
+      </table>
+      <p class="note">实际材料选型需结合具体反应原理、工艺条件及目标产物结构进行评定。</p>
+    </div>
+    <div class="sec" data-app="coat" style="display:none">
+      <h2>涂料与油漆</h2>
+      <p>在涂料与油漆行业中，锌基材料被广泛用于各类配方体系中，参与材料结构稳定、界面行为调节及长期使用性能控制。其应用通常与配方设计、分散体系及成膜过程密切相关。</p>
+      <h2>锌在体系中的作用</h2>
+      <p>在这个领域中，锌通常作为无机功能组分存在，参与颜填料体系、界面稳定及配方结构调节。其引入方式和分散状态会影响涂层形成过程及体系的长期稳定性。</p>
+      <h2>材料选型关注点</h2>
+      <p>涂料体系通常对分散行为、体系兼容性及储存稳定性较为敏感。因此，锌基材料的选择更关注其粒径特征、分散可控性以及与树脂和其他配方组分的相容性，而非单一性能指标。</p>
+      <table class="tbl">
+        <tr><th>常见材料类型</th><th>锌必得相关产品系列</th></tr>
+        <tr><td>氧化锌（ZnO）</td><td>ZB-G / ZB-M</td></tr>
+        <tr><td>特定锌基材料</td><td>ZB-S</td></tr>
+      </table>
+      <p class="note">实际材料选型需结合配方体系、加工工艺及使用环境进行综合评估。</p>
+    </div>
+    <div class="sec" data-app="glass" style="display:none">
+      <h2>玻璃与陶瓷</h2>
+      <p>在玻璃与陶瓷行业中，锌基材料通常作为配方体系中的重要无机组分，用于调节材料结构、烧成行为及成品稳定性。其应用往往与整体配方设计和高温工艺条件密切相关。</p>
+      <h2>锌在体系中的作用</h2>
+      <p>在此行业中，锌主要参与组成调节、结构稳定及烧结过程的控制。其引入方式和用量通常会影响材料的致密化行为、相变路径以及最终产品的一致性。</p>
+      <h2>材料选型关注点</h2>
+      <p>该类体系通常在高温条件下运行，对材料的热稳定性和反应可预测性要求较高。因此，锌基材料的选择更关注其在烧成过程中的行为特征、与其他无机组分的相容性以及批次稳定性。</p>
+      <table class="tbl">
+        <tr><th>常见材料类型</th><th>锌必得相关产品系列</th></tr>
+        <tr><td>氧化锌（ZnO）</td><td>ZB-G / ZB-M</td></tr>
+        <tr><td>特定锌基材料</td><td>ZB-S</td></tr>
+      </table>
+      <p class="note">实际材料选型需结合具体配方结构、烧成助剂使用及材料作用功能进行评估。</p>
+    </div>
+    <div class="sec" data-app="adv" style="display:none">
+      <h2>先进材料与高科技应用</h2>
+      <p>在橡胶与塑料相关材料体系中，锌基材料被广泛应用于配方设计与加工体系。其中，在橡胶工业中，锌基材料是硫化与交联体系中的关键无机组分；而在塑料领域，其应用主要集中于特定配方与功能材料场景，用于参与材料结构与稳定性调节。</p>
+      <h2>锌在体系中的作用</h2>
+      <p>在橡胶体系中，锌通常参与硫化反应的活化过程，并对交联网络的形成与结构稳定性产生重要影响，其行为直接关联加工窗口与材料一致性。在塑料体系中，锌更多作为辅助性无机组分存在，用于特定功能配方中。</p>
+      <h2>材料选型关注点</h2>
+      <p>橡胶与塑料体系对加工条件、反应一致性及长期使用表现具有不同侧重。对于橡胶应用，材料选择更关注锌在硫化体系中的反应参与方式及分散可控性；而在塑料应用中，则更强调材料与配方体系的相容性及在特定工艺条件下的稳定表现。</p>
+      <table class="tbl">
+        <tr><th>常见材料类型</th><th>锌必得相关产品系列</th></tr>
+        <tr><td>氧化锌（ZnO）</td><td>ZB-M</td></tr>
+        <tr><td>特定锌基材料</td><td>ZB-S</td></tr>
+      </table>
+      <p class="note">实际材料选型需结合具体配方结构、加工工艺及材料使用行为进行评估。</p>
+    </div>
+    <div class="ft">© 福建锌必得新材料有限公司</div>
   </section>
 
-  <!-- ========== PRODUCTS ========== -->
-  <section class="section products" id="products">
-    <div class="container">
-      <div class="section-header reveal">
-        <div class="section-label">Product 产品中心</div>
-        <h2 class="section-title">高品质碱式氯化锌</h2>
-        <p class="section-desc">白色或类白色结晶性粉末，质地细腻，流动性极佳，是饲料行业理想的锌源补充剂</p>
-      </div>
-      <div class="product-showcase reveal">
-        <div class="product-showcase-inner">
-          <div class="product-image-section">
-            <div class="molecule">⚗️</div>
-            <div class="formula-display">Zn₅(OH)₈Cl₂·H₂O</div>
-            <div class="cas">CAS: 11073-22-6 &nbsp;|&nbsp; 执行标准: GB/T 22546-2008</div>
-          </div>
-          <div class="product-info-section">
-            <h3>碱式氯化锌 Basic Zinc Chloride</h3>
-            <p class="subtitle">饲料添加剂 · 食品级锌源补充剂</p>
-            <p class="desc">
-              碱式氯化锌分子式为 Zn₅(OH)₈Cl₂·H₂O，严格依据国家标准 GB/T 22546-2008 组织生产与检验。产品易吸潮、水溶性佳，作为高效锌营养补充剂，广泛应用于饲料添加剂领域。
-            </p>
-            <table class="spec-table">
-              <tr><th>项目 Item</th><th>指标 Specification</th><th>要求 Requirement</th></tr>
-              <tr><td>碱式氯化锌含量</td><td>[Zn₅Cl₂(OH)₈·H₂O]</td><td class="pass">≥ 98.0%</td></tr>
-              <tr><td>锌 (Zn) 含量</td><td>Zinc content</td><td class="pass">≥ 58.06%</td></tr>
-              <tr><td>氯 (Cl) 含量</td><td>Chlorine content</td><td class="pass">12.00% ~ 12.86%</td></tr>
-              <tr><td>水溶性氯化物</td><td>Water-soluble chloride</td><td class="pass">≤ 0.65%</td></tr>
-              <tr><td>砷 (As)</td><td>Arsenic</td><td class="pass">≤ 0.0005%</td></tr>
-              <tr><td>铅 (Pb)</td><td>Lead</td><td class="pass">≤ 0.0008%</td></tr>
-              <tr><td>镉 (Cd)</td><td>Cadmium</td><td class="pass">≤ 0.0005%</td></tr>
-              <tr><td>细度 (0.1mm筛)</td><td>Fineness</td><td class="pass">≥ 99.0%</td></tr>
-            </table>
-          </div>
-        </div>
+  <!-- 关于我们 -->
+  <section class="page" data-page="about">
+    <div class="hd"><div class="logo">ZINC·BETTER <b>锌必得</b></div><h1>关于我们</h1></div>
+    <div class="sec"><h2>技术与应用</h2>
+      <p>我们的技术工作以材料在实际应用体系中的表现为出发点，覆盖从技术评估到应用验证的关键环节。</p>
+    </div>
+    <div class="sec" style="padding-top:0">
+      <div class="cards">
+        <div class="card"><div class="ic">🔬</div><div class="t">材料适配性评估</div><div class="d">在既有配方或工艺条件下，分析锌基材料与体系中其他组分的相互作用，评估其对性能、稳定性及工艺窗口（Process Window）的影响。</div></div>
+        <div class="card"><div class="ic">🔄</div><div class="t">替代与过渡路径分析</div><div class="d">在法规或行业标准发生变化的背景下，评估材料替代的可行性，重点关注剂量变化、工艺调整需求及对终端性能的影响。</div></div>
+        <div class="card"><div class="ic">📉</div><div class="t">低剂量与高效率应用探索</div><div class="d">在满足性能和合规要求的前提下，探索降低使用量、提升利用效率的可行路径，支持资源效率与环境目标。</div></div>
+        <div class="card"><div class="ic">🧪</div><div class="t">应用验证</div><div class="d">结合实验验证与应用反馈，持续评估材料在不同条件下的表现，为后续优化提供依据。</div></div>
       </div>
     </div>
+    <div class="sec">
+      <div style="background:#f4f6f8;border-left:3px solid var(--brand);padding:14px 16px;font-size:13px;line-height:1.8;border-radius:0 12px 12px 0;color:#3a3a3c">
+        <p>我们理解在许多行业中，材料升级并非简单的技术问题，而涉及成本结构、生产稳定性和市场接受度等现实限制。</p>
+        <p>并非所有问题都存在迅速和统一的解决方案，我们不会在超出实际条件的情况下作出承诺。但在可行范围内，我们持续协助客户逐步推进材料性能与合规水平的提升。</p>
+      </div>
+    </div>
+    <div class="sec">
+      <div style="background:linear-gradient(135deg,#0e3a5f,#0f5132);color:#fff;padding:16px;border-radius:12px">
+        <h2 style="border:none;padding:0;color:#fff">从规划开始的生产体系</h2>
+        <p style="color:rgba(255,255,255,.9)">福建锌必得新材料有限公司于 2025 年建成并投入运行。我们在规划阶段就围绕环保、能源效率和安全要求进行生产体系设计，并结合自动化与工艺稳定性，实现可持续运行目标，而非进行"先建设、后调整"的方式。</p>
+      </div>
+    </div>
+    <div class="sec">
+      <h2>行业经验</h2>
+      <p>我们的团队在锌基材料相关行业中持续参与近三十年，经历并适应了多轮行业整顿、环保升级和技术转型。</p>
+      <p>在不断变化的政策与市场环境中，我们通过技术积累、工艺理解和体系建设，逐步形成以合规、稳定和可持续为基础的发展路径。</p>
+    </div>
+    <div class="kpi">
+      <div class="k"><div class="v">2 大</div><div class="l">核心产品线（ZnO / TBZC）</div></div>
+      <div class="k"><div class="v">5 大</div><div class="l">应用领域</div></div>
+      <div class="k"><div class="v">7 类</div><div class="l">产品系列（ZB-A/P/S/G/M、TBZC）</div></div>
+      <div class="k"><div class="v">定制化</div><div class="l">配方适配评估</div></div>
+    </div>
+    <div class="sec"><div class="note">注：本页内容来自小程序「关于我们」截图，KPI 为汇总示意，准确信息以公司官方资料为准。</div></div>
+    <div class="ft">© 福建锌必得新材料有限公司</div>
   </section>
 
-  <!-- ========== TECHNOLOGY ========== -->
-  <section class="section technology" id="technology">
-    <div class="container">
-      <div class="section-header reveal">
-        <div class="section-label">Technology 核心工艺</div>
-        <h2 class="section-title">核心工艺与严格质控</h2>
-        <p class="section-desc">以严苛的工艺标准与精密的检测手段，铸就产品的卓越品质</p>
-      </div>
-      <div class="tech-grid reveal">
-        <div class="tech-card">
-          <div class="tech-card-num">01</div>
-          <h4>精准控时合成反应</h4>
-          <p>采用4-8小时黄金反应周期，通过精准温控确保反应充分，产物晶型稳定，为后续提纯奠定坚实基础。</p>
-        </div>
-        <div class="tech-card">
-          <div class="tech-card-num">02</div>
-          <h4>十级梯度深度洗涤</h4>
-          <p>独创十级梯度降温洗涤工艺，高效去除氯离子与铵根离子杂质，纯度指标远优于国家行业标准要求。</p>
-        </div>
-        <div class="tech-card">
-          <div class="tech-card-num">03</div>
-          <h4>全密闭闭环生产体系</h4>
-          <p>原料输送至成品灌装全程密闭管道流转，隔绝外界污染风险，保障产品纯度与批次间的高度一致性。</p>
-        </div>
-      </div>
-      <div class="env-banner reveal">
-        <div>
-          <h3>🌿 环保工艺优势</h3>
-          <p>配套MVR（机械蒸汽再压缩）及RO（反渗透）水处理系统，量产过程实现水资源循环利用，无需额外排放污水，真正实现绿色清洁生产。</p>
-        </div>
-        <div class="env-features">
-          <div class="env-feature">
-            <div class="env-feature-icon">♻️</div>
-            <div class="env-feature-text">MVR 机械蒸汽再压缩技术</div>
-          </div>
-          <div class="env-feature">
-            <div class="env-feature-icon">💧</div>
-            <div class="env-feature-text">RO 反渗透水处理系统</div>
-          </div>
-          <div class="env-feature">
-            <div class="env-feature-icon">🌱</div>
-            <div class="env-feature-text">水资源循环利用 · 零污水排放</div>
-          </div>
-          <div class="env-feature">
-            <div class="env-feature-icon">✅</div>
-            <div class="env-feature-text">绿色清洁生产认证</div>
-          </div>
-        </div>
-      </div>
+  <!-- 联系我们 -->
+  <section class="page" data-page="contact">
+    <div class="hd"><div class="logo">ZINC·BETTER <b>锌必得</b></div><h1>联系我们</h1></div>
+    <div class="sec"><h2>联系方式</h2></div>
+    <div class="crow"><div class="ic">🏭</div><div class="v">福建锌必得新材料有限公司<div class="l">氧化锌（ZnO）/ 碱式氯化锌（TBZC）研发生产</div></div></div>
+    <div class="crow"><div class="ic">📞</div><div class="v">+86-138-6010-5382<div class="l">销售与技术支持</div></div></div>
+    <div class="crow"><div class="ic">📍</div><div class="v">中国福建省宁德市古田县凤都镇工业路12号<div class="l">办公 / 工厂地址</div></div></div>
+    <div class="crow"><div class="ic">💬</div><div class="v">微信小程序「锌必得 ZincBetter」<div class="l">在线咨询（当前网页即小程序镜像）</div></div></div>
+    <div class="sec">
+      <h2>合作流程</h2>
+      <p>1. 需求沟通：明确目标行业、配方结构与性能指标<br>
+         2. 选型评估：结合材料作用功能推荐 ZB-A / ZB-P / ZB-S / ZB-G / ZB-M / TBZC<br>
+         3. 样品测试：提供小样与对应规格书<br>
+         4. 定制交付：按批次一致性要求组织生产与发货</p>
     </div>
+    <div class="sec"><div class="note">注：电话与地址来自小程序「联系我们」页截图；邮箱未在截图中出现，如需要请向公司确认后补入。本页为小程序镜像示意。</div></div>
+    <div class="ft">© 福建锌必得新材料有限公司</div>
   </section>
 
-  <!-- ========== QUALITY ========== -->
-  <section class="section quality" id="quality">
-    <div class="container">
-      <div class="section-header reveal">
-        <div class="section-label">Quality 质量保障</div>
-        <h2 class="section-title">品质为本，匠心制造</h2>
-        <p class="section-desc">从原料入厂到成品出厂，全流程100%关键指标检测，不合格产品绝不流入市场</p>
-      </div>
-      <div class="quality-grid reveal">
-        <div class="quality-card">
-          <div class="quality-card-icon">🔍</div>
-          <h4>原料入厂检测</h4>
-          <p>每批原料100%检验，不合格原料坚决拒收</p>
-        </div>
-        <div class="quality-card">
-          <div class="quality-card-icon">⚙️</div>
-          <h4>生产过程监控</h4>
-          <p>关键工艺节点实时监测，确保品质稳定</p>
-        </div>
-        <div class="quality-card">
-          <div class="quality-card-icon">🧪</div>
-          <h4>成品出厂检验</h4>
-          <p>全指标检测合格后方可出厂，批次追溯</p>
-        </div>
-        <div class="quality-card">
-          <div class="quality-card-icon">📦</div>
-          <h4>包装与仓储</h4>
-          <p>密封包装防潮，规范仓储保障产品品质</p>
-        </div>
-      </div>
-    </div>
-  </section>
+  <nav class="nav">
+    <a data-page="home" class="on"><span class="ico">🏠</span>首页</a>
+    <a data-page="products"><span class="ico">📦</span>产品介绍</a>
+    <a data-page="apps"><span class="ico">🌾</span>应用领域</a>
+    <a data-page="about"><span class="ico">ℹ️</span>关于我们</a>
+    <a data-page="contact"><span class="ico">✉️</span>联系我们</a>
+  </nav>
+</div>
 
-  <!-- ========== APPLICATIONS ========== -->
-  <section class="section applications" id="applications">
-    <div class="container">
-      <div class="section-header reveal">
-        <div class="section-label">Applications 应用领域</div>
-        <h2 class="section-title">多元应用场景覆盖</h2>
-        <p class="section-desc">碱式氯化锌凭借其高生物利用率与优异的理化特性，成为饲料与食品工业中理想的锌源添加剂</p>
-      </div>
-      <div class="app-grid reveal">
-        <div class="app-card">
-          <div class="app-card-header">
-            <div class="icon">🐖</div>
-            <h3>饲料工业</h3>
-          </div>
-          <div class="app-card-body">
-            <p>高效锌源添加剂，适配猪、禽及反刍动物全品类饲料生产。</p>
-            <ul>
-              <li>猪饲料锌营养补充</li>
-              <li>禽类饲料添加剂</li>
-              <li>反刍动物饲料</li>
-              <li>提升养殖经济效益</li>
-            </ul>
-          </div>
-        </div>
-        <div class="app-card">
-          <div class="app-card-header">
-            <div class="icon">🍞</div>
-            <h3>食品工业</h3>
-          </div>
-          <div class="app-card-body">
-            <p>作为营养强化剂，有效补充食品锌元素，提升营养价值。</p>
-            <ul>
-              <li>食品锌营养强化</li>
-              <li>保健食品添加剂</li>
-              <li>婴幼儿配方食品</li>
-              <li>提升食品营养价值</li>
-            </ul>
-          </div>
-        </div>
-        <div class="app-card">
-          <div class="app-card-header">
-            <div class="icon">🧪</div>
-            <h3>工业原料</h3>
-          </div>
-          <div class="app-card-body">
-            <p>广泛用于化工合成、医药制剂等领域，作为优质锌盐原料。</p>
-            <ul>
-              <li>化工合成原料</li>
-              <li>医药制剂原料</li>
-              <li>锌盐深加工</li>
-              <li>高品质锌源供应商</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+<script>
+// 底部 Tab 切换
+var nav=document.querySelectorAll('.nav a');
+var pages=document.querySelectorAll('.page');
+nav.forEach(function(a){a.addEventListener('click',function(){
+  var p=a.dataset.page;
+  nav.forEach(function(x){x.classList.toggle('on',x===a)});
+  pages.forEach(function(pg){pg.classList.toggle('active',pg.dataset.page===p)});
+  window.scrollTo(0,0);
+});});
+// 子 Tab（应用领域）
+var st=document.querySelectorAll('#subtabs .subtab');
+st.forEach(function(t){t.addEventListener('click',function(){
+  var app=t.dataset.app;
+  st.forEach(function(x){x.classList.toggle('on',x===t)});
+  document.querySelectorAll('.sec[data-app]').forEach(function(sec){
+    sec.style.display=(sec.dataset.app===app)?'':'none';
+  });
+});});
 
-  <!-- ========== VALUES ========== -->
-  <section class="section values" id="values">
-    <div class="container">
-      <div class="section-header reveal">
-        <div class="section-label">Core Value 核心价值</div>
-        <h2 class="section-title">为客户创造核心价值</h2>
-        <p class="section-desc">高品质原料加持，助力终端产品品质升级，赢得市场青睐</p>
-      </div>
-      <div class="values-grid reveal">
-        <div class="value-card">
-          <div class="value-card-icon">⚡</div>
-          <h4>提升生产效率</h4>
-          <p>优异的流动性与混合性，大幅降低加工能耗，提升产线效率</p>
-        </div>
-        <div class="value-card">
-          <div class="value-card-icon">🛡️</div>
-          <h4>保障动物健康</h4>
-          <p>高生物利用率锌源，改善肠道吸收，促进生长与抗病力</p>
-        </div>
-        <div class="value-card">
-          <div class="value-card-icon">📈</div>
-          <h4>强化产品竞争力</h4>
-          <p>高品质原料加持，助力终端产品品质升级，赢得市场青睐</p>
-        </div>
-        <div class="value-card">
-          <div class="value-card-icon">🌿</div>
-          <h4>环保安全合规</h4>
-          <p>低杂质低重金属，符合绿色养殖标准，生产过程更安全</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ========== CONTACT ========== -->
-  <section class="section contact" id="contact">
-    <div class="container">
-      <div class="section-header reveal">
-        <div class="section-label">Contact 联系我们</div>
-        <h2 class="section-title">期待与您合作</h2>
-        <p class="section-desc">欢迎垂询洽谈，我们将竭诚为您提供高品质的碱式氯化锌产品与服务</p>
-      </div>
-      <div class="contact-grid reveal">
-        <div class="contact-info">
-          <h3>FuJian ZincBetter</h3>
-          <p>福建锌必得新材料有限公司</p>
-          <div class="contact-items">
-            <div class="contact-item">
-              <div class="contact-item-icon">👤</div>
-              <div class="contact-item-text">
-                <h4>联系人 Contact Person</h4>
-                <p>古田先生 / Mr. Gu Tian</p>
-              </div>
-            </div>
-            <div class="contact-item">
-              <div class="contact-item-icon">📞</div>
-              <div class="contact-item-text">
-                <h4>电话 Phone</h4>
-                <p><a href="tel:+8613950090658">+86-139-5009-0658</a></p>
-              </div>
-            </div>
-            <div class="contact-item">
-              <div class="contact-item-icon">✉️</div>
-              <div class="contact-item-text">
-                <h4>邮箱 Email</h4>
-                <p><a href="mailto:ZincBetter@outlook.com">ZincBetter@outlook.com</a></p>
-              </div>
-            </div>
-            <div class="contact-item">
-              <div class="contact-item-icon">📍</div>
-              <div class="contact-item-text">
-                <h4>地址 Address</h4>
-                <p>福建省古田县凤都镇工业路12号（凤都工业集中区）</p>
-                <p style="font-size:13px;color:var(--gray-400);margin-top:2px;">No.12 Gongye Road, Fengdu Town, Gutian County, Fujian Province</p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="contact-map">
-          <div class="contact-map-placeholder">
-            <div class="pin">📍</div>
-            <h4>福建省古田县凤都镇</h4>
-            <p>工业路12号（凤都工业集中区）<br />No.12 Gongye Road, Fengdu Industrial Zone<br />Gutian County, Fujian Province, China</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ========== FOOTER ========== -->
-  <footer class="footer">
-    <div class="container">
-      <div class="footer-grid">
-        <div class="footer-brand">
-          <div class="logo">
-            <div class="logo-text">
-              <span class="cn">福建锌必得新材料有限公司</span>
-              <span class="en">FuJian ZincBetter New Materials Co., Ltd.</span>
-            </div>
-          </div>
-          <p>以科技赋能产业，以品质铸就信赖。致力于成为锌系新材料领域的领军企业，为客户创造卓越价值。</p>
-        </div>
-        <div class="footer-col">
-          <h4>产品 Products</h4>
-          <ul>
-            <li><a href="#products">碱式氯化锌</a></li>
-            <li><a href="#products">饲料级锌源</a></li>
-            <li><a href="#products">食品级锌添加剂</a></li>
-            <li><a href="#products">工业锌盐原料</a></li>
-          </ul>
-        </div>
-        <div class="footer-col">
-          <h4>关于 About</h4>
-          <ul>
-            <li><a href="#about">公司简介</a></li>
-            <li><a href="#technology">核心工艺</a></li>
-            <li><a href="#quality">质量保障</a></li>
-            <li><a href="#applications">应用领域</a></li>
-          </ul>
-        </div>
-        <div class="footer-col">
-          <h4>联系 Contact</h4>
-          <ul>
-            <li><a href="tel:+8613950090658">+86-139-5009-0658</a></li>
-            <li><a href="mailto:ZincBetter@outlook.com">ZincBetter@outlook.com</a></li>
-            <li><a href="#contact">福建省古田县凤都镇</a></li>
-          </ul>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        <span>© 2026 FuJian ZincBetter New Materials Co., Ltd. All Rights Reserved.</span>
-        <span>GB/T 22546-2008 标准制造 | 闽ICP备相关备案号</span>
-      </div>
-    </div>
-  </footer>
-
-  <!-- ========== SCRIPTS ========== -->
-  <script>
-    // Header scroll effect
-    const header = document.getElementById('header');
-    window.addEventListener('scroll', () => {
-      header.classList.toggle('scrolled', window.scrollY > 50);
-    });
-
-    // Mobile nav toggle
-    const mobileToggle = document.getElementById('mobileToggle');
-    const mobileNav = document.getElementById('mobileNav');
-    mobileToggle.addEventListener('click', () => {
-      mobileNav.classList.toggle('active');
-    });
-    function closeMobile() { mobileNav.classList.remove('active'); }
-
-    // Scroll reveal animation
-    const revealElements = document.querySelectorAll('.reveal');
-    const revealObserver = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-        }
-      });
-    }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
-    revealElements.forEach(el => revealObserver.observe(el));
-
-    // Smooth scroll for anchor links
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', function(e) {
-        e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
-        if (target) {
-          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        }
-      });
-    });
-  </script>
+/* ===== 图片轮播 ===== */
+(function(){
+  var track=document.getElementById('track');
+  var items=track.querySelectorAll('.carousel-item');
+  var dotsWrap=document.getElementById('dots');
+  var idx=0;
+  // 生成指示点
+  items.forEach(function(_,i){
+    var d=document.createElement('span');
+    d.addEventListener('click',function(){goto(i);});
+    dotsWrap.appendChild(d);
+  });
+  var dots=dotsWrap.querySelectorAll('span');
+  function render(){
+    items.forEach(function(item,i){item.classList.toggle('active',i===idx);});
+    dots.forEach(function(d,i){d.classList.toggle('on',i===idx);});
+  }
+  function goto(i){ idx=(i+items.length)%items.length; render(); }
+  window.carouselNext=function(){goto(idx+1);};
+  window.carouselPrev=function(){goto(idx-1);};
+  // 自动播放：每 3 秒切一张（只有一张图时不轮播）
+  if(items.length>1){
+    setInterval(function(){goto(idx+1);},3000);
+  }
+  // 触摸滑动
+  var startX=0;
+  track.addEventListener('touchstart',function(e){startX=e.touches[0].clientX;});
+  track.addEventListener('touchend',function(e){
+    var dx=e.changedTouches[0].clientX-startX;
+    if(dx<-30) goto(idx+1);
+    else if(dx>30) goto(idx-1);
+  });
+  render();
+})();
+</script>
 </body>
 </html>
